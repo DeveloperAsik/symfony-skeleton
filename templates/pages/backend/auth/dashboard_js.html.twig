@@ -1,0 +1,18 @@
+{% block javascripts %}
+    {% apply spaceless %}
+      <script>
+          var DashboardJS = function () {
+              return {
+                  //main function to initiate the module
+                  init: function () {
+                      //fnToaStr('DashboardJS successfully load', 'success', {timeOut: 2000});
+                      console.log('DashboardJS successfully load');
+                  }
+              };
+          }();
+          jQuery(document).ready(function () {
+              DashboardJS.init();
+          });
+      </script>
+    {% endapply %}
+{% endblock %}

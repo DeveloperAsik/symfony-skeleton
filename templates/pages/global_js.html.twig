@@ -1,0 +1,18 @@
+{% block javascripts %}
+    {% apply spaceless %}
+      <script>
+          var GlobalJS = function () {
+              return {
+                  //main function to initiate the module
+                  init: function () {
+                      //fnToaStr('GlobalJS successfully load', 'success', {timeOut: 2000});
+                      console.log('GlobalJS successfully load');
+                  }
+              };
+          }();
+          jQuery(document).ready(function () {
+              GlobalJS.init();
+          });
+      </script>
+    {% endapply %}
+{% endblock %}

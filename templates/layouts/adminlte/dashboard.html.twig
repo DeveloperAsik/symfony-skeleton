@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title_for_layout }}</title>
+        {% block stylesheets %}
+            <!-- Font Awesome -->
+            {{ include('includes/adminlte/index/_include_css.html.twig') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+            <div class="wrapper">
+                <!-- Navbar -->
+                {{ include('includes/adminlte/index/_nav.html.twig') }}
+                <!-- /.navbar -->
+
+                <!-- Main Sidebar Container -->
+                {{ include('includes/adminlte/index/_sidebar.html.twig') }}
+                <!-- Content Wrapper. Contains page content -->
+
+                <div class="content-wrapper">
+                    <!-- Content Header (Page header) -->
+                    {{ include('includes/adminlte/index/_content_header.html.twig') }}
+                    <!-- /.content-header -->
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <div class="container-fluid">
+                            <!-- Small boxes (Stat box) -->
+                              {{ include('components/content.html.twig') }}
+                            <!-- /.row (main row) -->
+                        </div><!-- /.container-fluid -->
+                    </section>
+                    <!-- /.content -->
+                </div>
+                <!-- /.content-wrapper -->
+                    {{ include('includes/adminlte/index/_footer.html.twig') }}
+                <!-- Control Sidebar -->
+                <aside class="control-sidebar control-sidebar-dark">
+                    <!-- Control sidebar content goes here -->
+                </aside>
+                <!-- /.control-sidebar -->
+            </div>
+        {% endblock %}
+
+        {% block script %}
+            {{ include('includes/adminlte/index/_include_js.html.twig') }}
+        {% endblock  %}
+    </body>
+</html>

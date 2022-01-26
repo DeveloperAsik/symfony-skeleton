@@ -1,0 +1,20 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+app-home:
+    path : /
+    controller: App\Controller\Backend\AuthController::login
+    methods: GET
+app-login:
+    path: /login
+    controller: App\Controller\Backend\AuthController::login
+    methods: GET
+app-dashboard:
+    path : /dashboard
+    controller: App\Controller\Backend\AuthController::dashboard
+    methods: GET

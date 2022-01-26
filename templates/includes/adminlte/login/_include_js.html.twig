@@ -1,0 +1,27 @@
+<!-- jQuery -->
+<script src="{{ asset('_dist/templates/adminlte/plugins/jquery/jquery.min.js') }}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ asset('_dist/templates/adminlte/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{{ asset('_dist/templates/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+{% if load_ajax_var is defined %}
+    {{ include(load_ajax_var) }}
+{% endif %}
+
+{% if load_js is defined %}
+    {{ include(load_js) }}
+{% endif %}
+
+
+{% if _path_global_js is defined %}
+    {{ include(_path_global_js) }}
+{% endif %}
+
+{% if _path_view_js is defined %}
+    {{ include(_path_view_js) }}
+{% endif %}

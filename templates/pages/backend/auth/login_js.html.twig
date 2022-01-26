@@ -1,0 +1,18 @@
+{% block javascripts %}
+    {% apply spaceless %}
+      <script>
+          var LoginJS = function () {
+              return {
+                  //main function to initiate the module
+                  init: function () {
+                      //fnToaStr('LoginJS successfully load', 'success', {timeOut: 2000});
+                      console.log('LoginJS successfully load');
+                  }
+              };
+          }();
+          jQuery(document).ready(function () {
+              LoginJS.init();
+          });
+      </script>
+    {% endapply %}
+{% endblock %}

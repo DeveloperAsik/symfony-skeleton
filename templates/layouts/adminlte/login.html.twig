@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title_for_layout }}</title>
+        {% block stylesheets %}
+            <!-- Font Awesome -->
+            {{ include('includes/adminlte/login/_include_css.html.twig') }}
+        {% endblock %}
+    </head>
+    <body class="hold-transition login-page">
+        {% block body %}
+            <div class="login-box">
+                <div class="login-logo">
+                    <a href="../../index2.html"><b>Admin</b>LTE</a>
+                </div>
+                <!-- Small boxes (Stat box) -->
+                <div class="card">
+                    {{ include('components/content.html.twig') }}
+                </div>
+            </div>
+        {% endblock %}
+
+        {% block script %}
+            {{ include('includes/adminlte/login/_include_js.html.twig') }}
+        {% endblock  %}
+    </body>
+</html>
